@@ -5,7 +5,7 @@
                 <div class="flex flex-shrink-0 items-center">
                     <NuxtLink 
                         to="/"          
-                        class="font-semibold tracking-widest transition ease-in-out duration-300 hover:scale-125"
+                        class="tracking-wider text-sm font-medium transition ease-in-out duration-300 scale-125 hover:scale-150"
                     >
                         Portfolio
                     </NuxtLink>
@@ -15,20 +15,14 @@
                 <div class="flex space-x-10">
                     <NuxtLink 
                         to="/"          
-                        :class="{
-                            'text-sm font-medium scale-125 transition ease-in-out duration-300 hover:scale-150': route.path === '/',
-                            'text-sm font-medium transition ease-in-out duration-300 hover:scale-150': route.path !== '/'
-                        }"
+                        :class="`text-sm font-medium transition ease-in-out duration-300 hover:scale-150 ${route.path === '/' ? 'scale-125' : ''}`"
                     >
                         Home
                     </NuxtLink>
 
                     <NuxtLink 
                         to="/skills" 
-                        :class="{
-                            'text-sm font-medium scale-125 transition ease-in-out duration-300 hover:scale-150': route.path === '/skills',
-                            'text-sm font-medium transition ease-in-out duration-300 hover:scale-150': route.path !== '/skills'
-                        }"
+                        :class="`text-sm font-medium transition ease-in-out duration-300 hover:scale-150 ${route.path === '/skills' ? 'scale-125' : ''}`"
                     >
                         Skills
                     </NuxtLink>
@@ -36,23 +30,26 @@
 
                     <NuxtLink 
                         to="/about" 
-                        :class="{
-                            'text-sm font-medium scale-125 transition ease-in-out duration-300 hover:scale-150': route.path === '/about',
-                            'text-sm font-medium transition ease-in-out duration-300 hover:scale-150': route.path !== '/about'
-                        }"
+                        :class="`text-sm font-medium transition ease-in-out duration-300 hover:scale-150 ${route.path === '/about' ? 'scale-125' : ''}`"
                     >
                         About
                     </NuxtLink>
 
                     <NuxtLink 
                         to="/contact" 
-                        :class="{
-                            'text-sm font-medium scale-125 transition ease-in-out duration-300 hover:scale-150': route.path === '/contact',
-                            'text-sm font-medium transition ease-in-out duration-300 hover:scale-150': route.path !== '/contact'
-                        }"
+                        :class="`text-sm font-medium transition ease-in-out duration-300 hover:scale-150 ${route.path === '/contact' ? 'scale-125' : ''}`"
                     >
                         Contact
                     </NuxtLink>
+
+                    <a href="#" @click="toggleDarkMode" class="text-sm font-bold scale-125 transition ease-in-out duration-300 hover:scale-150">
+                        <span v-if="isDark">
+                            <IconsSun/>
+                        </span>
+                        <span v-else>
+                            <IconsMoon/>
+                        </span>
+                    </a>
 
                 </div>
             </div>
@@ -62,4 +59,5 @@
 
 <script setup>
 const route = useRoute();
+const { isDark, toggleDarkMode } = useDarkMode();
 </script>
