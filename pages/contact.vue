@@ -1,14 +1,21 @@
 <template>
     <div>
-        <div class="">
-            
-            
-            <div class="block max-w-sm p-6">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight">Contact</h5>
-                <p class="font-normal text-gray-700">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-            </div>
-
-
+        <div>
+            <h5 class="mb-2 text-2xl font-bold tracking-wider text-gray-700">Contact</h5>
+            <ul class="list-none text-gray-700 font-normal space-y-3">
+                <li class="flex justify-start items-center">
+                    <IconsPhone/>
+                    <a href="#" class="ms-1">+959760434715</a>
+                </li>
+                <li class="flex justify-start items-center">
+                    <IconsMail/>
+                    <a href="#" class="ms-1">kaungthantzin409@gmail.com</a>
+                </li>
+                <li class="flex justify-start items-center">
+                    <IconsLocation/>
+                    <span class="ms-1">Yangon, Myanmar</span>
+                </li>
+            </ul>
         </div>
     </div>
 </template>

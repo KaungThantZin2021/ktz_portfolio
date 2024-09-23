@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div>
         <footer class="fixed bottom-10 left-20 right-20 flex h-16 items-center justify-between">
             <div class="flex flex-shrink-0 items-center">
                 <div class="flex space-x-5">

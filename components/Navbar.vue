@@ -1,6 +1,6 @@
 <template>
-    <div class="">
-        <nav class="">
+    <div>
+        <nav class="fixed top-10 left-20 right-20">
             <div class="mx-auto max-w-7xl">
                 <div class="relative flex h-16 items-center justify-between">
                     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -53,9 +53,18 @@
                                         'text-sm font-medium scale-125 transition ease-in-out duration-300 hover:scale-150': route.path === '/',
                                         'text-sm font-medium transition ease-in-out duration-300 hover:scale-150': route.path !== '/'
                                     }"
-                                    aria-current="page"
                                 >
                                     Home
+                                </NuxtLink>
+
+                                <NuxtLink 
+                                    to="/skills" 
+                                    :class="{
+                                        'text-sm font-medium scale-125 transition ease-in-out duration-300 hover:scale-150': route.path === '/skills',
+                                        'text-sm font-medium transition ease-in-out duration-300 hover:scale-150': route.path !== '/skills'
+                                    }"
+                                >
+                                    Skills
                                 </NuxtLink>
                                 
 
