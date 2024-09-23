@@ -1,6 +1,4 @@
-import { ref, watch, onMounted } from 'vue'
-
-export function useDarkMode() {
+export const useDarkMode = () => {
     const isDark = ref(false)
 
     // Check for user preference in localStorage
