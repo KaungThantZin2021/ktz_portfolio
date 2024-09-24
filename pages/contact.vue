@@ -19,3 +19,27 @@
         </div>
     </div>
 </template>
+
+<script setup>
+useHead({
+    title: 'Kaung Thant Zin | Contact',
+    meta: [
+    {
+        name: 'description',
+        content: 'This is about to contact web developer Kaung Thant Zin.'
+    },
+    {
+        name: 'keywords',
+        content: 'kaung thant zin, web developer, portfolio, +959760434715, kaungthantzin409@gmail.com, Yangon, Myanmar'
+    },
+    {
+        property: 'og:title',                
+        content: 'Kaung Thant Zin | Contact'
+    },
+    {
+        property: 'og:description',
+        content: 'This is about to contact web developer Kaung Thant Zin.'
+    }
+    ]
+})
+</script>

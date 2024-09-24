@@ -6,3 +6,27 @@
         </div>
     </div>
 </template>
+
+<script setup>
+useHead({
+    title: 'Kaung Thant Zin | About',
+    meta: [
+    {
+        name: 'description',
+        content: 'This is about web developer Kaung Thant Zin.'
+    },
+    {
+        name: 'keywords',
+        content: 'Detail-oriented and results-driven web developer with almost 3 years of experience in building and maintaining responsive websites and web applications. Proficient in front-end and back-end development. Strong focus on creating user-friendly interfaces and optimizing website performance. Adept at collaborating with cross-functional teams to deliver high-quality, scalable solutions. Passionate about learning new technologies and continuously improving development practices to enhance user experience and meet business objectives.'
+    },
+    {
+        property: 'og:title',                
+        content: 'Kaung Thant Zin | About'
+    },
+    {
+        property: 'og:description',
+        content: 'This is about web developer Kaung Thant Zin.'
+    }
+    ]
+})
+</script>
